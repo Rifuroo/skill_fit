@@ -28,7 +28,9 @@ class DatabaseSeeder extends Seeder
         // 2. Create 20 Houses
         $houses = [];
         for ($i = 1; $i <= 20; $i++) {
-            $status = $i <= 18 ? 'dihuni' : 'tidak_dihuni'; // 18 occupied for more income
+            // Study Case: 15 dihuni tetap, 5 lainnya (kontrak/kosong)
+            // Kita buat 15 dihuni tetap, 3 dihuni kontrak, 2 kosong
+            $status = $i <= 18 ? 'dihuni' : 'tidak_dihuni'; 
             $houses[] = House::create([
                 'nomor_rumah' => 'A-' . $i,
                 'status_rumah' => $status,
@@ -58,9 +60,10 @@ class DatabaseSeeder extends Seeder
                     ]);
                 }
 
+                $isTetap = ($index < 15); // 1-15 Tetap, 16-18 Kontrak
                 $resident = Resident::create([
                     'nama_lengkap' => $faker->firstName() . ' ' . $faker->lastName(),
-                    'status_penghuni' => $index < 12 ? 'tetap' : 'kontrak',
+                    'status_penghuni' => $isTetap ? 'tetap' : 'kontrak',
                     'nomor_telepon' => $faker->numerify('08##########'),
                     'status_menikah' => $faker->boolean(),
                 ]);
@@ -91,7 +94,7 @@ class DatabaseSeeder extends Seeder
                         'jenis_iuran' => 'kebersihan',
                         'bulan' => $m,
                         'tahun' => 2026,
-                        'jumlah' => 25000,
+                        'jumlah' => 15000, // Matching study case: 15k
                         'tanggal_bayar' => Carbon::create(2026, $m, rand(1, 10)),
                     ]);
                 }

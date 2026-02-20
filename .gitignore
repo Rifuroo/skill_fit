@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules in root (if any)
+node_modules/
+
+# Ignore log files
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# We want to track backend and frontend folders, 
+# but their specific gitignores will handle their contents.

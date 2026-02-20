@@ -68,30 +68,58 @@ Berikut adalah rangkuman visual dari fitur-fitur yang telah diimplementasikan se
 
 ### 1. Dashboard Keuangan
 Ringkasan saldo kas saat ini serta grafik visual pemasukan dan pengeluaran selama satu tahun.
-![Dashboard](screenshots/dashboard.png)
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/dashboard.png" width="800" />
+</details>
 
 ### 2. Manajemen Penghuni
 Daftar seluruh warga perumahan beserta rincian data diri, status pernikahan, dan dokumen foto KTP.
-![Residents List](screenshots/residents_list.png)
-![Residents Modal](screenshots/residents_modal.png) (Modal Tambah/Edit dengan fitur Upload)
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/residents_list.png" width="800" />
+  <img src="screenshots/residents_modal.png" width="800" />
+  <p><i>Modal Tambah/Edit dengan fitur Upload</i></p>
+</details>
 
 ### 3. Manajemen Rumah & Historis
 Pemantauan status rumah (Dihuni/Tersedia) serta fitur penempatan warga pada rumah tertentu.
-![Houses Grid](screenshots/houses_grid.png) (Tampilan utama grid rumah)
-![Houses Management](screenshots/houses_management.png) (Modal "Kelola Rumah" pada tab Kelola Penghuni)
-![Houses Payment Status](screenshots/houses_payment_status.png) (Modal "Kelola Rumah" pada tab **Status Iuran** - Bukti status lunas/belum per rumah)
-![Houses History](screenshots/houses_history.png) (Catatan historis penghuni per rumah)
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/houses_grid.png" width="800" />
+  <p><i>Tampilan utama grid rumah</i></p>
+  <img src="screenshots/houses_management.png" width="800" />
+  <p><i>Modal "Kelola Rumah" pada tab Kelola Penghuni</i></p>
+  <img src="screenshots/houses_payment_status.png" width="800" />
+  <p><i>Modal "Kelola Rumah" pada tab Status Iuran - Bukti status lunas/belum per rumah</i></p>
+  <img src="screenshots/houses_history.png" width="800" />
+  <p><i>Catatan historis penghuni per rumah</i></p>
+</details>
 
 ### 4. Sistem Pembayaran Iuran
 Proses pencatatan iuran (Satpam & Kebersihan) dengan fitur pembayaran langsung untuk periode 1 tahun.
-![Payments Modal](screenshots/payments_modal.png)
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/payments_modal.png" width="800" />
+</details>
 
 ### 5. Manajemen Pengeluaran
 Pencatatan pengeluaran operasional RT (Gaji satpam, perbaikan fasilitas, dll) untuk transparansi kas.
-![Expenses List](screenshots/expenses_list.png)
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/expenses_list.png" width="800" />
+</details>
 
 ### 6. Laporan Keuangan & Cetak
 Fitur rekapitulasi transaksi bulanan dengan layout yang dioptimalkan untuk kebutuhan pencetakan.
-![Reports View](screenshots/reports_view.png)
-[Lihat Preview Cetak PDF](screenshots/reports_print.pdf) (Tampilan Preview cetak/PDF)
-\
+<details>
+  <summary>Klik untuk lihat Screenshot</summary>
+  <br/>
+  <img src="screenshots/reports_view.png" width="800" />
+  <p><a href="screenshots/reports_print.pdf">Lihat Preview Cetak PDF</a> (Tampilan Preview cetak/PDF)</p>
+</details>

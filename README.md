@@ -26,7 +26,7 @@ Jalankan perintah berikut di dalam direktori `backend/`:
 # Install dependensi
 composer install
 
-# Konfigurasi lingkungan
+# Konfigurasi Environment
 cp .env.example .env
 # --> Pastikan DB_DATABASE=skill_fit sudah sesuai di file .env
 
@@ -68,30 +68,30 @@ Berikut adalah rangkuman visual dari fitur-fitur yang telah diimplementasikan se
 
 ### 1. Dashboard Keuangan
 Ringkasan saldo kas saat ini serta grafik visual pemasukan dan pengeluaran selama satu tahun.
-- `screenshots/dashboard.png`
+![Dashboard](screenshots/dashboard.png)
 
 ### 2. Manajemen Penghuni
 Daftar seluruh warga perumahan beserta rincian data diri, status pernikahan, dan dokumen foto KTP.
-- `screenshots/residents_list.png`
-- `screenshots/residents_modal.png` (Modal Tambah/Edit dengan fitur Upload)
+![Residents List](screenshots/residents_list.png)
+![Residents Modal](screenshots/residents_modal.png) (Modal Tambah/Edit dengan fitur Upload)
 
 ### 3. Manajemen Rumah & Historis
 Pemantauan status rumah (Dihuni/Tersedia) serta fitur penempatan warga pada rumah tertentu.
-- `screenshots/houses_grid.png` (Tampilan utama grid rumah)
-- `screenshots/houses_management.png` (Modal "Kelola Rumah" pada tab Kelola Penghuni)
-- `screenshots/houses_payment_status.png` (Modal "Kelola Rumah" pada tab **Status Iuran** - Bukti status lunas/belum per rumah)
-- `screenshots/houses_history.png` (Catatan historis penghuni per rumah)
+![Houses Grid](screenshots/houses_grid.png) (Tampilan utama grid rumah)
+![Houses Management](screenshots/houses_management.png) (Modal "Kelola Rumah" pada tab Kelola Penghuni)
+![Houses Payment Status](screenshots/houses_payment_status.png) (Modal "Kelola Rumah" pada tab **Status Iuran** - Bukti status lunas/belum per rumah)
+![Houses History](screenshots/houses_history.png) (Catatan historis penghuni per rumah)
 
 ### 4. Sistem Pembayaran Iuran
 Proses pencatatan iuran (Satpam & Kebersihan) dengan fitur pembayaran langsung untuk periode 1 tahun.
-- `screenshots/payments_modal.png`
+![Payments Modal](screenshots/payments_modal.png)
 
 ### 5. Manajemen Pengeluaran
 Pencatatan pengeluaran operasional RT (Gaji satpam, perbaikan fasilitas, dll) untuk transparansi kas.
-- `screenshots/expenses_list.png`
+![Expenses List](screenshots/expenses_list.png)
 
 ### 6. Laporan Keuangan & Cetak
 Fitur rekapitulasi transaksi bulanan dengan layout yang dioptimalkan untuk kebutuhan pencetakan.
-- `screenshots/reports_view.png`
-- `screenshots/reports_print.pdf` (Tampilan Preview cetak/PDF)
+![Reports View](screenshots/reports_view.png)
+[Lihat Preview Cetak PDF](screenshots/reports_print.pdf) (Tampilan Preview cetak/PDF)
 \

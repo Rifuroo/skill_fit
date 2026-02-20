@@ -1,125 +1,98 @@
-# RT Management System (Skill Fit Test)
+# SKILL FIT TEST - FULL STACK PROGRAMMER
+## RT Management System
 
-Aplikasi manajemen administrasi RT untuk pengelolaan data warga, iuran bulanan, pemantauan status rumah, serta laporan keuangan.
-Proyek ini dibangun menggunakan **Laravel 11** dan **React 18** (Vite) sebagai syarat seleksi Full Stack Programmer.
+Project ini adalah implementasi studi kasus sistem manajemen administrasi RT untuk seleksi Full Stack Programmer di Jagoanhosting.
+
+### �️ Tech Stack
+*   **Backend**: Laravel 11
+*   **Frontend**: React 18 (Vite)
+*   **Database**: MySQL
 
 ---
 
 ## 💻 Panduan Instalasi
 
-Mohon ikuti langkah-langkah berikut secara berurutan untuk memastikan aplikasi berjalan dengan baik.
+Pastikan sudah terinstall: **PHP >= 8.2**, **Composer**, **Node.js**, **NPM**, dan **MySQL**.
 
-### Prasyarat Sistem
-*   PHP >= 8.2 & Composer
-*   Node.js (v18+) & NPM
-*   MySQL Database
-
-### 1. Persiapan Database
-Buat database baru melalui MySQL client (misal: phpMyAdmin):
-```sql
-CREATE DATABASE skill_fit;
-```
-
-### 2. Instalasi Backend (Laravel)
-Jalankan perintah berikut di dalam direktori `backend/`:
+### 1. Inisialisasi
 ```bash
-# Install dependensi
-composer install
-
-# Konfigurasi Environment
-cp .env.example .env
-# --> Pastikan DB_DATABASE=skill_fit sudah sesuai di file .env
-
-# Inisialisasi aplikasi
-php artisan key:generate
-php artisan storage:link
-
-# Migrasi & Seeding (Data Dummy)
-php artisan migrate:fresh --seed
-
-# Menjalankan server
-php artisan serve
+git clone https://github.com/Rifuroo/skill_fit.git
+cd skill_fit
 ```
-*Server akan berjalan di `http://127.0.0.1:8000`*
 
-### 3. Instalasi Frontend (React)
-Jalankan perintah berikut di dalam direktori `frontend/`:
-```bash
-# Install dependensi
-npm install
+### 2. Setup Backend
+1. Masuk ke folder backend: `cd backend`
+2. Install dependensi: `composer install`
+3. Copy env: `cp .env.example .env`
+4. Sesuaikan database di `.env` (isi `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+5. Buat database kosong bernama `skill_fit` di MySQL.
+6. Generate key & link:
+   ```bash
+   php artisan key:generate
+   php artisan storage:link
+   ```
+7. Migrasi & Seed: `php artisan migrate:fresh --seed`
+8. Jalankan API: `php artisan serve`
+> API jalan di: **http://127.0.0.1:8000**
 
-# Menjalankan development server
-npm run dev
-```
-*Aplikasi dapat diakses melalui browser di `http://localhost:5173`*
+### 3. Setup Frontend
+1. Buka terminal baru.
+2. Masuk ke folder frontend: `cd frontend`
+3. Install dependensi: `npm install`
+4. Jalankan aplikasi: `npm run dev`
+> Aplikasi jalan di: **http://localhost:5173**
 
 ---
 
 ## 📊 Entity Relationship Diagram (ERD)
-
-Struktur database dirancang untuk menangani histori penghuni rumah dan pencatatan iuran secara modular.
-![ERD Aplikasi](ERD.png)
+![ERD](ERD.png)
 
 ---
 
-## 📸 Foto Implementasi Fitur (Screenshot)
+## 📸 Rangkuman Fitur
 
-Berikut adalah rangkuman visual dari fitur-fitur yang telah diimplementasikan sesuai dengan requirement tugas:
-
-### 1. Dashboard Keuangan
-Ringkasan saldo kas saat ini serta grafik visual pemasukan dan pengeluaran selama satu tahun.
-<details>
-  <summary>Klik untuk lihat Screenshot</summary>
-  <br/>
-  <img src="screenshots/dashboard.png" width="800" />
-</details>
-
-### 2. Manajemen Penghuni
-Daftar seluruh warga perumahan beserta rincian data diri, status pernikahan, dan dokumen foto KTP.
+### 1. Manajemen Penghuni
+Fitur CRUD warga dengan upload foto KTP dan atribut lengkap (status nikah, jenis penghuni, dll).
 <details>
   <summary>Klik untuk lihat Screenshot</summary>
   <br/>
   <img src="screenshots/residents_list.png" width="800" />
   <img src="screenshots/residents_modal.png" width="800" />
-  <p><i>Modal Tambah/Edit dengan fitur Upload</i></p>
 </details>
 
-### 3. Manajemen Rumah & Historis
-Pemantauan status rumah (Dihuni/Tersedia) serta fitur penempatan warga pada rumah tertentu.
+### 2. Manajemen Rumah & History
+Monitoring 20 rumah dengan histori penempatan penghuni dan status iuran bulanan per rumah.
 <details>
   <summary>Klik untuk lihat Screenshot</summary>
   <br/>
   <img src="screenshots/houses_grid.png" width="800" />
-  <p><i>Tampilan utama grid rumah</i></p>
   <img src="screenshots/houses_management.png" width="800" />
-  <p><i>Modal "Kelola Rumah" pada tab Kelola Penghuni</i></p>
   <img src="screenshots/houses_payment_status.png" width="800" />
-  <p><i>Modal "Kelola Rumah" pada tab Status Iuran - Bukti status lunas/belum per rumah</i></p>
   <img src="screenshots/houses_history.png" width="800" />
-  <p><i>Catatan historis penghuni per rumah</i></p>
 </details>
 
-### 4. Sistem Pembayaran Iuran
-Proses pencatatan iuran (Satpam & Kebersihan) dengan fitur pembayaran langsung untuk periode 1 tahun.
+### 3. Pembayaran Iuran
+Pencatatan iuran (Satpam & Kebersihan) dengan dukungan fitur pembayaran langsung 1 tahun.
 <details>
   <summary>Klik untuk lihat Screenshot</summary>
   <br/>
   <img src="screenshots/payments_modal.png" width="800" />
 </details>
 
-### 5. Manajemen Pengeluaran
-Pencatatan pengeluaran operasional RT (Gaji satpam, perbaikan fasilitas, dll) untuk transparansi kas.
+### 4. Manajemen Pengeluaran
+Pencatatan dana keluar (Gaji satpam, perbaikan, dll) untuk laporan transparansi kas.
 <details>
   <summary>Klik untuk lihat Screenshot</summary>
   <br/>
   <img src="screenshots/expenses_list.png" width="800" />
 </details>
 
-### 6. Laporan Keuangan & Cetak
-Fitur rekapitulasi transaksi bulanan dengan layout yang dioptimalkan untuk kebutuhan pencetakan.
+### 5. Report & Dashboard
+Grafik pemasukan/pengeluaran 1 tahun, saldo kas, dan detail transaksi bulanan (PDF ready).
 <details>
   <summary>Klik untuk lihat Screenshot</summary>
   <br/>
+  <img src="screenshots/dashboard.png" width="800" />
   <img src="screenshots/reports_view.png" width="800" />
-  <p><a href="screenshots/reports_print.pdf">Lihat Preview Cetak PDF</a> (Tampilan Preview cetak/PDF)</p>
+  <p><a href="screenshots/reports_print.pdf">Lihat File PDF Laporan</a></p>
 </details>
